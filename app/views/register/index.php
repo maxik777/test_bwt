@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <form class="form-horizontal" action="register" method="post">
+        <form class="form-horizontal" action="" method="post">
             <h2 style="text-align: center">Форма Регистрации</h2>
             <div class="form-group">
                 <label for="firstName" class="col-sm-3 control-label">Имя</label>

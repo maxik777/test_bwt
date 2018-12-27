@@ -5,13 +5,15 @@ return[
         'controller'=>'register',
         'action'=>'index'
     ],
-    'register/insert' => [
-        'controller' => 'register',
-        'action' => 'registerUsers'
-    ],
+
 
     'login'=>[
         'controller'=>'login',
         'action'=>'authorize'
+    ],
+
+    'main'=>[
+        'controller'=>'main',
+        'action'=>'weather'
     ]
 ];

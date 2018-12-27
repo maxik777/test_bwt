@@ -24,11 +24,11 @@ class Register extends Model
             'gender' => $post['Gener']
         ];
 
-        $result = $this->db->query('INSERT INTO users (`firstname`, `secondname`, `email`, 
-`birthday`, `gender`) VALUES  (:firstname, :secondname, :email, :birthday, :gender)', $post);
 
-        return $result;
-    }
+            $result = $this->db->query('INSERT INTO users (`firstname`, `secondname`, `email`, 
+`birthday`, `gender`) VALUES  (:firstname, :secondname, :email, :birthday, :gender)', $post);
+            return $result;
+}
 
     public function validateForm()
     {
