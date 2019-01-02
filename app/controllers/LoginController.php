@@ -6,10 +6,13 @@ use app\core\Controller;
 
 class LoginController extends Controller
 {
-    public function authorizeAction()
+    public function indexAction()
     {
         $this->view->render();
-        $this->model->emailVerification($_POST);
+    }
 
+    public function authorizeAction()
+    {
+        $result = $this->model->emailVerification($_POST);
     }
 }

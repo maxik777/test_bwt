@@ -17,9 +17,7 @@
             <label for="comment">Comment:</label>
             <textarea name="comment" class="form-control" rows="5" id="comment"></textarea>
         </div>
-        <div class="g-recaptcha" data-sitekey="6LfWLIYUAAAAABe9zh8IRLZBS-0QHYMqM5WW2wKZ"></div>
-
         <button type="submit" class="btn btn-primary btn-block" name="submit" value="submit">Добавить</button>
-
+        <div class="g-recaptcha" data-sitekey="6Le5QIYUAAAAACG7x9k_IKolxfw2W3SfCZwsByYJ"></div>
     </form> <!-- /form -->
 </div> <!-- ./container -->

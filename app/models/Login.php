@@ -14,10 +14,12 @@ class Login extends Model
         $result = $this->db->row('SELECT `email` FROM users WHERE `email` = :email',$post);
         if ($result)
         {
-            setcookie("email", $post['email']);
+            setcookie("email", $post['email'],null,"/");
             header('Location: http://bwt-test/main');
-        }else
+        }else {
             echo 'email не существует!';
+        }
+
 
 
     }

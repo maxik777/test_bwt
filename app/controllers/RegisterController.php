@@ -9,6 +9,12 @@ class RegisterController extends Controller
     public function indexAction()
     {
         $this->view->render();
-        $this->model->registerUsers($_POST);
     }
+
+    public function registerAction()
+    {
+        $result = $this->model->registerUsers($_POST);
+
+    }
+
 }

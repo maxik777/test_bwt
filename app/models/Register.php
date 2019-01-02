@@ -24,10 +24,13 @@ class Register extends Model
             'gender' => $post['Gener']
         ];
 
-
             $result = $this->db->query('INSERT INTO users (`firstname`, `secondname`, `email`, 
 `birthday`, `gender`) VALUES  (:firstname, :secondname, :email, :birthday, :gender)', $post);
-            return $result;
+            if ($result){
+                setcookie("email", $post['email'],null,"/");
+                header('Location: http://bwt-test/main');
+            }
+
 }
 
     public function validateForm()

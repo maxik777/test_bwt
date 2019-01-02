@@ -10,6 +10,7 @@ abstract class Controller
     public $view;
 
 
+
     public function __construct($route)
     {
         $this->route = $route;

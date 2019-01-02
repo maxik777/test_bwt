@@ -7,6 +7,7 @@ class View
 {
     public $path;
     public $route;
+    public $layout = 'default';
 
 
     public function __construct($route)
@@ -15,12 +16,13 @@ class View
 
     }
 
-    public function render()
+    public function render($vars=[])
     {
-        //extract($vars);
+        extract($vars);
         ob_start();
         require 'app/views/'.$this->path.'.php';
-       // $content = ob_get_clean();
+        $content = ob_get_clean();
+        require 'app/views/layouts/'.$this->layout.'.php';
 
     }
 }
