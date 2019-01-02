@@ -14,13 +14,14 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
-            width: 400px;
+            width: 500px;
         }
         .panel{
             margin: 20px 180px;
         }
-        .radio-inline{
-            margin: 0 60px;
+        .radio-inline input[type="radio"]{
+            margin-right: 50px;
+
         }
         .btn_link{
             margin: 30px 0px;
