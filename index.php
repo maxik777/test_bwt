@@ -5,7 +5,10 @@ use app\core\Router;
 spl_autoload_register(function($class)  //Автозагрузчик классов.
 {
 $path=str_replace('\\','/', $class.'.php');
-require $path;
+if (is_file($path)){
+    require $path;
+}
+
 
 });
 session_start();

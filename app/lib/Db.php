@@ -6,12 +6,24 @@ use PDO;
 class Db
 {
 
-    protected $db;
+    private static $db;
 
     public function __construct()
     {
         $config = include 'app/config/db.php';
-        $this->db = new PDO('mysql:host='.$config['host'].';dbname='.$config['db_name'], $config['user_name'], $config['password']);
+        $this->db = new PDO('mysql:host=' . $config['host'] . ';dbname=' . $config['db_name'], $config['user_name'], $config['password']);
+    }
+
+
+
+    public static function getDb()
+    {
+        if ( ! isset( self::$db ) ) {
+            self::$db = new self();
+        }
+
+        return self::$db;
+
     }
 
     public function query($sql, $params = [])
@@ -47,3 +59,4 @@ class Db
         return $result->fetchColumn();
     }
 }
+

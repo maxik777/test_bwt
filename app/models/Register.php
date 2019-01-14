@@ -36,19 +36,19 @@ class Register extends Model
     public function validateForm()
     {
         if (iconv_strlen($_POST['firstName']) < 3) {
-            exit('Имя должно быть не менее 3х символов!');
+            echo('Имя должно быть не менее 3х символов!');
         } elseif (is_numeric($_POST['firstName'])) {
-            exit('Имя должно содержать только буквы');
+            echo('Имя должно содержать только буквы');
         }
 
         if (iconv_strlen($_POST['secondName']) < 3) {
-            exit('Фамилия должна быть не менее 3х символов!');
+            echo('Фамилия должна быть не менее 3х символов!');
         } elseif (is_numeric($_POST['secondName'])) {
-            exit('Фамилия должна содержать только буквы!');
+            echo('Фамилия должна содержать только буквы!');
         }
 
         if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            exit('Email введен неверно!');
+            echo('Email введен неверно!');
         }
 
     }
